@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Fondo más claro, usando Neutro Claro de la paleta */
+  --bg: #F5F0E6; /* neutralLight */
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  color: #1a1a1a;
+}
+
+/* Tipografía mínima, moderna y legible */
+@layer base {
+  h1 { @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-forest tracking-tight; }
+  h2 { @apply text-3xl sm:text-4xl md:text-5xl font-bold text-darkGreen tracking-tight; }
+  h3 { @apply text-xl sm:text-2xl font-semibold text-darkGreen; }
+  p  { @apply text-base sm:text-lg leading-relaxed text-slate-700; }
+  a  { @apply text-verdant hover:text-forest transition-colors; }
+}
+
+/* Botón primario */
+.btn-primary { @apply inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-forest text-white font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200; }
+
+/* Tarjetas secundarias */
+.card { @apply rounded-2xl bg-white shadow-md hover:shadow-xl border border-verdant/10 transition-all duration-300; }
+
+/* Contenedor secciones */
+.section { @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8; }
