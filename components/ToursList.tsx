@@ -12,7 +12,7 @@ export default function ToursList() {
       <Reveal delay={0.05}>
         <p className="mt-4 text-xl text-center max-w-3xl mx-auto opacity-80">Experiencias auténticas diseñadas según tu interés y condición física</p>
       </Reveal>
-      <div className="mt-12 grid md:grid-cols-3 gap-8 items-start">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-start">
         {tours.map((t, idx) => (
           <Reveal key={t.id} delay={0.06 * idx}>
             <TourCard tour={t} />

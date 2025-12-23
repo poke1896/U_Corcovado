@@ -12,12 +12,12 @@ export default function TourCard({ tour }: { tour: Tour }) {
 
   return (
     <div className="card overflow-hidden group transition-all duration-300 flex flex-col bg-white">
-      <div className="relative overflow-hidden h-64">
+      <div className="relative overflow-hidden h-48 sm:h-56 md:h-64">
         <Image src={tour.image} alt={tour.name} width={800} height={480} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
       </div>
       
-      <div className="p-6 sm:p-8 flex-1 flex flex-col min-h-[280px]">
-        <h3 className="text-2xl font-bold mb-3 text-forest">{tour.name}</h3>
+      <div className="p-5 sm:p-6 md:p-8 flex-1 flex flex-col min-h-[220px] sm:min-h-[260px] md:min-h-[280px]">
+        <h3 className="text-2xl font-bold mb-3 text-forest break-words">{tour.name}</h3>
         <p className="text-verdant mb-4 flex-1 line-clamp-3">{tour.description}</p>
         
         <button
